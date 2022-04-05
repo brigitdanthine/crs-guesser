@@ -26,5 +26,5 @@ The plugin converts the entered coordinate from all desired CRS into the CRS of 
 
 In QGIS:
 5. Load a basemap (e.g. with the QuickMapPlugin)
-6. Zoom to the corresponding location the point should be situated
+6. 6. Zoom to the corresponding location the point should be situated
 7. Look in the attribute table from which original CRS the correctly situated point was reprojected. This is the correct CRS for the respective coordinates.  
