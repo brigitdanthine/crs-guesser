@@ -25,6 +25,7 @@ In the background:
 The plugin converts the entered coordinate from all desired CRS into the CRS of the automatically loaded output layer
 
 In QGIS:
+
 5. Load a basemap (e.g. with the QuickMapPlugin)
 
 6. Zoom to the corresponding location the point should be situated
