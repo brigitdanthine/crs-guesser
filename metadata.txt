@@ -1,0 +1,60 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=CRS Guesser
+qgisMinimumVersion=3.0
+description=Guesses unknown CRS for layers
+version=0.1
+author=Brigit Danthine
+email=brigit.danthine@uibk.ac.at
+
+about = The plugin was developed for the special case when there are coordinates whose CRS is unknown.
+		Note: this is not the preferred way to set the CRS. It is intended to help only in the special cases when no conclusions about the certainly correct CRS are possible. 
+		Short Tutorial:
+		In the Plugin:
+		1. Input of one of the unknown coordinate
+		2. Select wether all CRS of QGIS (only EPSG) should be searched, only those of Austria or from a custom list 
+		3. Specifying the CRS of the output layer
+		4. Press OK
+		In the background:
+		The plugin converts the entered coordinate from all desired CRS into the CRS of the automatically loaded output layer
+		In QGIS:
+		5. Load a basemap (e.g. with the QuickMapPlugin)
+		6. Zoom to the corresponding location the point should be situated
+		7. Look in the attribute table from which original CRS the correctly situated point was reprojected. This is the correct CRS for the respective coordinates.  
+
+tracker=http://bugs
+repository=http://repo
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=python
+
+homepage=http://homepage
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+Category of the plugin: Raster, Vector, Database or Web
+# category=
+
+# If the plugin can run on QGIS Server.
+server=False
+
