@@ -15,7 +15,7 @@ Short Tutorial:
 3. Go to Install from ZIP
 4. Choose downloaded zip and press Install Plugin
 
-In the Plugin:
+Inside the Plugin:
 1. Input either one of the unknown coordinate or choose a input-layer
 2. Select wether all CRS of QGIS (only EPSG) should be searched, only those of Austria or from a custom list 
 3. Specifying the CRS of the output layer
