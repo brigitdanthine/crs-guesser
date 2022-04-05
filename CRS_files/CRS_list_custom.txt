@@ -1,0 +1,10 @@
+## Für eine eigene Koordinatenliste:
+## 1. den gesamten Inhalt dieser Datei löschen
+## 2. in jede Zeile den EPSG-Code eines zu durchsuchenden Koordinatensystemes eingeben
+## Beispiel:
+31254
+31255
+4326
+3857
+## 3. Datei speichern
+## 4. Plugin mit Custom unter "Zu testende KBS" laufen lassen
