@@ -201,15 +201,15 @@ class CRSguesser:
     def button_ok(self):
         #Fehlermeldung wenn keine Liste ausgewählt
         if self.dlg.wahl_test_kbs.currentText() == "":
-            self.iface.messageBar().pushMessage("Bitte eine zu durchsuchende Koordinatenliste definieren!", level=Qgis.Critical)
+            self.iface.messageBar().pushMessage("Please define a list of coordinates to be searched!", level=Qgis.Critical)
         #Fehlermeldung wenn kein KBS ausgewählt ist
         if self.dlg.eingabe_ausgabe_kbs.crs() == "QgsCoordinateReferenceSystem: invalid":
-            self.iface.messageBar().pushMessage("Bitte ein Ausgabe-KBS definieren!", level=Qgis.Critical)
+            self.iface.messageBar().pushMessage("Please define an output CRS!", level=Qgis.Critical)
         
         #wenn checkbox manuelle Koordinateneingabe
         if self.dlg.checkbox_manual.isChecked() == True:             
-            if self.dlg.eingabe_x_koordinate.value() > 0:
-                if self.dlg.eingabe_y_koordinate.value() > 0:
+            if self.dlg.eingabe_x_koordinate.value() != 0:
+                if self.dlg.eingabe_y_koordinate.value() != 0:
                     #Konvertierung manuelle Koordinateneingabe
                     x1, y1 = (self.dlg.eingabe_x_koordinate.value(), self.dlg.eingabe_y_koordinate.value())
                     Konvertierte_Koordinaten = open(self.plugin_dir + "/output/Guessed_CRS.csv", "w")
@@ -262,14 +262,14 @@ class CRSguesser:
                         print ("Layer not loaded")
                     QgsProject.instance().addMapLayer(guessed_crs)
                     
-                    self.iface.messageBar().pushMessage("Ausgeführt", level=Qgis.Success)  #Success/Info, Warning, Critical,
+                    self.iface.messageBar().pushMessage("Done", level=Qgis.Success)  #Success/Info, Warning, Critical,
 
-                else: self.iface.messageBar().pushMessage("Bitte Bitte Y-Koordinate eingeben!", level=Qgis.Critical)
+                else: self.iface.messageBar().pushMessage("Please Enter Y-Coordinate!", level=Qgis.Critical)
             if self.dlg.eingabe_x_koordinate.value() == 0:
                 if self.dlg.eingabe_y_koordinate.value() > 0:
-                    self.iface.messageBar().pushMessage("Bitte X-Koordinate eingeben!", level=Qgis.Critical)
+                    self.iface.messageBar().pushMessage("Please Enter X-Coordinate!", level=Qgis.Critical)
                 else:
-                    self.iface.messageBar().pushMessage("Bitte X und Y-Koordinate eingeben!", level=Qgis.Critical)
+                    self.iface.messageBar().pushMessage("Please Enter X- and Y-Coordinate!", level=Qgis.Critical)
        
         #wenn checkbox Layer-Eingabe 
         if self.dlg.checkbox_layer.isChecked() == True:
@@ -345,7 +345,7 @@ class CRSguesser:
         #wenn keine checkbox
         if not self.dlg.checkbox_manual.isChecked() == True:
             if not self.dlg.checkbox_layer.isChecked() == True:
-                self.iface.messageBar().pushMessage("Bitte wählen, ob Koordinate eingegeben wird oder diese aus einem Layer ausgelesen werden soll", level=Qgis.Critical)
+                self.iface.messageBar().pushMessage("Please select whether coordinate is to be entered manuelly or read from a layer", level=Qgis.Critical)
   
 
     def prof(self):
