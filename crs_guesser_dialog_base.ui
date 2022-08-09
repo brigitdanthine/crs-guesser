@@ -36,7 +36,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>Koordinate eingeben:</string>
+    <string>Coordinate input:</string>
    </property>
    <widget class="QgsDoubleSpinBox" name="eingabe_x_koordinate">
     <property name="geometry">
@@ -48,7 +48,10 @@
      </rect>
     </property>
     <property name="decimals">
-     <number>3</number>
+     <number>6</number>
+    </property>
+    <property name="minimum">
+     <double>-1000000000000000.000000000000000</double>
     </property>
     <property name="maximum">
      <double>1000000000000000.000000000000000</double>
@@ -64,7 +67,10 @@
      </rect>
     </property>
     <property name="decimals">
-     <number>3</number>
+     <number>6</number>
+    </property>
+    <property name="minimum">
+     <double>-1000000000000000.000000000000000</double>
     </property>
     <property name="maximum">
      <double>1000000000000000.000000000000000</double>
@@ -80,7 +86,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Manuelle Koordinateneingabe:</string>
+     <string>Input specific coordinates:</string>
     </property>
     <property name="tristate">
      <bool>false</bool>
@@ -96,7 +102,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Layer wählen:</string>
+     <string>Choose a layer:</string>
     </property>
    </widget>
    <widget class="QgsMapLayerComboBox" name="eingabe_layer">
@@ -119,7 +125,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>ODER</string>
+     <string>OR</string>
     </property>
    </widget>
   </widget>
@@ -133,7 +139,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Hilfe/Tutorial</string>
+    <string>Help/Tutorial</string>
    </property>
    <property name="default">
     <bool>false</bool>
@@ -152,7 +158,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>Zu testende KBS:</string>
+    <string>CRS to test:</string>
    </property>
    <widget class="QComboBox" name="wahl_test_kbs">
     <property name="geometry">
@@ -186,7 +192,7 @@
      <set>Qt::ImhMultiLine</set>
     </property>
     <property name="text">
-     <string>Zu editierende Datei für &quot;Custom&quot;</string>
+     <string>File to edit for &quot;Custom&quot;</string>
     </property>
     <property name="iconSize">
      <size>
@@ -206,7 +212,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>Ausgabe KBS wählen:</string>
+    <string>Choose the output CRS:</string>
    </property>
    <widget class="QgsProjectionSelectionWidget" name="eingabe_ausgabe_kbs">
     <property name="geometry">
@@ -282,7 +288,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Schliessen</string>
+    <string>Close</string>
    </property>
   </widget>
   <zorder>layoutWidget</zorder>
