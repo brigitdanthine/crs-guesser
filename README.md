@@ -5,7 +5,7 @@ qgisMinimumVersion=3.0
 description=Guesses unknown CRS for layers
 version=0.1
 author=Brigit Danthine
-email=brigit.danthine@uibk.ac.at
+email=brigit.danthine@oeaw.ac.at
 
 The plugin was developed for the special case when there are files or coordinates whose CRS is unknown.
 Note: this is not the preferred way to set the CRS. It is intended to help only in the special cases when no conclusions about the certainly correct CRS are possible. 
