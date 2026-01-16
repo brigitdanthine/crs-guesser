@@ -339,7 +339,8 @@ class CRSguesser:
                 count +=1
                 # Progress
                 progress_count += progress_count_plus
-                self.dlg.progressBar.setValue(progress_count)
+                
+                self.dlg.progressBar.setValue(int(round(progress_count)))
             QgsProject.instance().addMapLayer(vl)
             
         #wenn keine checkbox
